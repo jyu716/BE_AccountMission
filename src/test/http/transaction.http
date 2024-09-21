@@ -1,0 +1,24 @@
+### 거래 사용
+POST http://localhost:8080/transaction/use
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "accountNumber": "9536131457",
+  "amount": 1000
+}
+
+### 거래 취소
+POST http://localhost:8080/transaction/cancelUse
+Content-Type: application/json
+
+{
+  "accountNumber": "9536131457",
+  "transactionId": "a0ca3133bd5c43fdadfd3147cf5451e3",
+  "amount": 1000
+}
+
+
+### 거래 가져오기
+GET http://localhost:8080/transaction/getTransaction?transactionId=ab98996e625647fba0dddcd66e45f141
+Content-Type: application/json

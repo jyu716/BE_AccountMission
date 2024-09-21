@@ -1,0 +1,29 @@
+spring:
+
+  datasource:
+    url: jdbc:h2:mem:account
+    username: sa
+    password:
+      driverClassName: org.h2.Driver
+  H2:
+    console:
+      enabled: true
+  jpa:
+    defer-datasource-initialization: true #이 옵션이 있어야지 data.sql에 넣은 insert문이 실행
+    database-platform: H2
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+# ?? ??
+# redis:
+#   host: 127.0.0.1
+#   port: 6379
+# ? ?? ??? deprecated ?? ??. ??? ??? ?? ??.
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379

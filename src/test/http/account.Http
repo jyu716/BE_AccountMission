@@ -1,0 +1,22 @@
+
+### 계좌 생성
+POST http://localhost:8080/account
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "balance": 100000
+}
+
+### 계좌 정지
+DELETE http://localhost:8080/account
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "accountNumber": "7767378530"
+}
+
+### 리스트 가져오기
+GET http://localhost:8080/account?userId=1
+Content-Type: application/json
